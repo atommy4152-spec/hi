@@ -8,6 +8,13 @@ let noClickCount = 0;
 let yesScale = 1;
 let noScale = 1;
 
+const noCatImages = ["cat2.png", "cat3.png", "cat4.png", "cat5.png"];
+
+function getRandomNoCatImage() {
+  const randomIndex = Math.floor(Math.random() * noCatImages.length);
+  return noCatImages[randomIndex];
+}
+
 function moveNoButtonRandomly() {
   const wrapWidth = buttonWrap.clientWidth;
   const wrapHeight = buttonWrap.clientHeight;
@@ -27,13 +34,12 @@ function moveNoButtonRandomly() {
 
 noBtn.addEventListener("click", () => {
   noClickCount++;
+  catImage.src = getRandomNoCatImage();
 
   if (noClickCount === 1) {
-    catImage.src = "cat2.png";
     message.textContent = "咦，不要那麼快拒絕嘛 🥺";
     moveNoButtonRandomly();
   } else if (noClickCount === 2) {
-    catImage.src = "cat2.png";
     message.textContent = "再想一下好不好嘛 💕";
 
     yesScale = 1.35;
@@ -44,8 +50,6 @@ noBtn.addEventListener("click", () => {
 
     moveNoButtonRandomly();
   } else {
-    catImage.src = "cat2.png";
-
     yesScale += 0.15;
     noScale = Math.max(0.5, noScale - 0.08);
 
