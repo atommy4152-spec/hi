@@ -37,10 +37,10 @@ noBtn.addEventListener("click", () => {
   catImage.src = getRandomNoCatImage();
 
   if (noClickCount === 1) {
-    message.textContent = "咦，不要那麼快拒絕嘛 🥺";
+    message.textContent = "Huh 🥺";
     moveNoButtonRandomly();
   } else if (noClickCount === 2) {
-    message.textContent = "再想一下好不好嘛 💕";
+    message.textContent = "PlZ 💕";
 
     yesScale = 1.35;
     noScale = 0.85;
@@ -57,10 +57,10 @@ noBtn.addEventListener("click", () => {
     noBtn.style.transform = `scale(${noScale})`;
 
     const messages = [
-      "真的不要嗎？🥺",
-      "你再考慮一下啦 💗",
-      "Yes 比較好對吧 ✨",
-      "拜託拜託～💕"
+      "Huh？🥺",
+      "Consider again 💗",
+      "Yes I a better choice ✨",
+      "PlZ～💕"
     ];
 
     message.textContent = messages[(noClickCount - 3) % messages.length];
