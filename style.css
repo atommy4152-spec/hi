@@ -1,36 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f3f4f6;
-  color: #111827;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #f9dbe7 0%, #f5b8cb 45%, #e59ab4 100%);
 }
 
 .container {
-  max-width: 720px;
-  margin: 100px auto;
   text-align: center;
-  padding: 20px;
+  padding: 24px;
 }
 
 h1 {
-  font-size: 40px;
-  margin-bottom: 16px;
+  color: #a12862;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-p {
-  font-size: 18px;
-  margin-bottom: 24px;
+.cat-image {
+  width: 170px;
+  max-width: 70vw;
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
 }
 
 button {
-  background: #2563eb;
-  color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 22px;
+  border-radius: 10px;
   cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 button:hover {
-  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.yes-btn {
+  background: #58b947;
+}
+
+.no-btn {
+  background: #d94141;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #8a1f53;
+  font-weight: bold;
+  min-height: 28px;
 }
